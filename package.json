@@ -1,0 +1,33 @@
+{
+  "name": "user-streaming-fb-feed",
+  "version": "1.0.0",
+  "description": "user-streaming-fb-feed",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrbontor/user-streaming-fb-feed.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrbontor/user-streaming-fb-feed/issues"
+  },
+  "homepage": "https://github.com/mrbontor/user-streaming-fb-feed#readme",
+  "dependencies": {
+    "ajv": "^7.1.1",
+    "express": "^4.17.1",
+    "ini": "^1.3.5",
+    "minimist": "^1.2.5",
+    "mysql2": "^2.2.5",
+    "needle": "^2.6.0",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "redis": "^3.0.2",
+    "winston": "^3.3.3"
+  }
+}
