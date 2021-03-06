@@ -30,6 +30,7 @@ async function getFeed(req, res) {
             return res.status(NOT_FOUND).send(result)
         }
         // if (resp.feed.data.length === 0)  return res.status(NOT_FOUND).send(result)
+        result.status = true
         result.message = "Success"
         result.data = resp
         res.status(SUCCESS).send(result);

@@ -36,7 +36,7 @@ config = iniParser.init(config, configFile, args)
 config.log.level = args.logLevel || config.log.level
 
 const take_port = config.app.port;
-const port = take_port || process.env.PORT;
+const port = take_port || process.env.PORT || 2021;
 
 // Initialize logging library
 // logging.init(config.log)
@@ -72,5 +72,6 @@ app.use(function(err, req, res, next) {
 const routes = require('./router/router');
 routes(app);
 
-app.listen(port);
+const server = app.listen(port);
 logging.info('[app] API-SERVICE FB-STREAM-FEED-USER STARTED on ' + port);
+module.exports = server;
