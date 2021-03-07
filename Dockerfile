@@ -16,5 +16,8 @@ RUN npm install --save
 # Bundle app source
 COPY . .
 
+# Environment
+ENV NODE_ENV development
+
 # Run the command on container startup
 ENTRYPOINT ["npm", "start"]

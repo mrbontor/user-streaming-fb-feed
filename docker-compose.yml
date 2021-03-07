@@ -1,0 +1,11 @@
+version: '3'
+services:
+    api-fd_user_feed:
+        build: .
+        container_name: api-fd_user_feed
+        networks: ["fd_user_feed"]
+        ports:
+            - "8080:2021"
+networks:
+  fd_user_feed:
+    driver: bridge
