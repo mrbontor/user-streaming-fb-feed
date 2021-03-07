@@ -85,7 +85,9 @@ class Logging {
 
     init(args = {}) {
         if ('file' === args.type) return this.createLogging(args)
-
+        if ('both' == args.type) {
+            this.createLogging(args)
+        }
         return this.createConsoleLogging(args)
     }
 

@@ -13,7 +13,7 @@ let config = {
     log: {
         path: 'var/log/',
         level: 'debug',
-        type: 'file',
+        type: 'both',
         errorSufix: '-error',
         filename: 'log-fb-streaming-feed'
     }

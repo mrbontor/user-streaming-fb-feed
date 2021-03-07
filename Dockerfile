@@ -2,7 +2,7 @@ FROM node:12-alpine
 MAINTAINER mrbontor@gmail.com
 
 # Replace shell with bash so we can source files
-RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+RUN ln -s /bin/sh /bin/bash
 
 RUN apk update; apk add tzdata
 
