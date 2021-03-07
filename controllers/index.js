@@ -19,7 +19,7 @@ async function getFeed(req, res) {
         let userFieldSet = 'id, name, feed';
 
         let params = {
-            access_token: `271495250190737|pNYT8kxDPkwYrJhgCJ88HZy7eyE`,
+            access_token: config.facebook.token,
             fields: userFieldSet
         };
         let resp = await request('get', URIFB + req.params.id , params)

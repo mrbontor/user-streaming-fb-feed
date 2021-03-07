@@ -40,12 +40,6 @@ const port = take_port || process.env.PORT || 2021;
 
 // Initialize logging library
 logging.init(config.log)
-// logging.init({
-//     path: config.log.path,
-//     level: config.log.level,
-//     filename: config.log.filename
-// })
-
 
 logging.info(`[CONFIG] ${JSON.stringify(iniParser.get())}`)
 
