@@ -28,9 +28,9 @@ if (args.h || args.help) {
 // overwrite default config with config file
 let configFile = {}
 if (env === 'development') {
-    configFile = args.c || args.config || './log-fb-streaming-feed.dev.ini'
+    configFile = args.c || args.config || './config.fb.stream.feed.api.dev.ini'
 } else {
-    configFile = args.c || args.config || './log-fb-streaming-feed.prod.ini'
+    configFile = args.c || args.config || './config.fb.stream.feed.api.prod.ini'
 }
 config = iniParser.init(config, configFile, args)
 config.log.level = args.logLevel || config.log.level
@@ -39,12 +39,12 @@ const take_port = config.app.port;
 const port = take_port || process.env.PORT || 2021;
 
 // Initialize logging library
-// logging.init(config.log)
-logging.init({
-    path: config.log.path,
-    level: config.log.level,
-    filename: config.log.filename
-})
+logging.init(config.log)
+// logging.init({
+//     path: config.log.path,
+//     level: config.log.level,
+//     filename: config.log.filename
+// })
 
 
 logging.info(`[CONFIG] ${JSON.stringify(iniParser.get())}`)
